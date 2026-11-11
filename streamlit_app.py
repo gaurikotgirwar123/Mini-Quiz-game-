@@ -1,8 +1,32 @@
 import streamlit as st
 
-# -----------------------------
+# ==============================
+# QUIZ GAME
+# ==============================
+
+st.set_page_config(page_title="Quiz Game", page_icon="🎯")
+
+st.title("🎯 Quiz Game")
+st.write("Test your Python and computer science knowledge")
+
+st.markdown("---")
+
+st.subheader("Minor Project")
+st.write("**College:** G.H Raisoni University, Amravati")
+st.write("**Course:** Minor Project")
+
+st.write("**Group Members:**")
+st.write("• Uday Uttam Kasdekar")
+st.write("• Gauri Sunil Kotgirwar")
+st.write("• Madhura Dilip Doifode")
+st.write("• Niraj Manoj Shirbhate")
+
+st.markdown("---")
+
+
+# ==============================
 # QUIZ QUESTIONS
-# -----------------------------
+# ==============================
 
 questions = [
     {
@@ -18,67 +42,37 @@ questions = [
     },
     {
         "question": "Which programming language is widely used in Artificial Intelligence and Machine Learning?",
-        "options": [
-            "Python",
-            "HTML",
-            "CSS",
-            "SQL"
-        ],
+        "options": ["Python", "HTML", "CSS", "SQL"],
         "answer": "Python",
         "explanation": "Python is widely used in AI and Machine Learning because of its simple syntax and powerful libraries."
     },
     {
-        "question": "Which symbol is used to write a single-line comment in Python?",
-        "options": [
-            "#",
-            "//",
-            "/*",
-            "<!--"
-        ],
+        "question": "Which symbol is used to write a comment in Python?",
+        "options": ["//", "#", "/*", "--"],
         "answer": "#",
-        "explanation": "In Python, the # symbol is used to create a single-line comment."
+        "explanation": "In Python, the # symbol is used to write a single-line comment."
     },
     {
         "question": "What is the capital of India?",
-        "options": [
-            "Mumbai",
-            "New Delhi",
-            "Kolkata",
-            "Chennai"
-        ],
+        "options": ["Mumbai", "New Delhi", "Kolkata", "Chennai"],
         "answer": "New Delhi",
         "explanation": "New Delhi is the capital city of India."
     },
     {
         "question": "Which function is used to display output in Python?",
-        "options": [
-            "input()",
-            "display()",
-            "print()",
-            "show()"
-        ],
+        "options": ["input()", "display()", "print()", "show()"],
         "answer": "print()",
-        "explanation": "The print() function is used to display text or other values on the screen."
+        "explanation": "The print() function is used to display output on the screen."
     },
     {
-        "question": "Which data type stores True or False values in Python?",
-        "options": [
-            "String",
-            "Boolean",
-            "Integer",
-            "Float"
-        ],
-        "answer": "Boolean",
-        "explanation": "The Boolean data type stores one of two values: True or False."
+        "question": "Which of these is a Boolean value in Python?",
+        "options": ["True", "10", "Hello", "3.14"],
+        "answer": "True",
+        "explanation": "Boolean values in Python are True and False."
     },
     {
         "question": "Which operator is used for multiplication in Python?",
-        "options": [
-            "+",
-            "-",
-            "*",
-            "/"
-        ],
+        "options": ["+", "*", "x", "%"],
         "answer": "*",
         "explanation": "The * operator is used for multiplication in Python."
     },
@@ -95,252 +89,172 @@ questions = [
     },
     {
         "question": "Which keyword is used to define a function in Python?",
-        "options": [
-            "function",
-            "define",
-            "def",
-            "fun"
-        ],
+        "options": ["function", "define", "def", "fun"],
         "answer": "def",
         "explanation": "The def keyword is used to define a function in Python."
     },
     {
-        "question": "Which language is mainly used to create the structure of web pages?",
-        "options": [
-            "Python",
-            "HTML",
-            "C++",
-            "SQL"
-        ],
+        "question": "Which language is mainly used to structure web pages?",
+        "options": ["Python", "HTML", "C++", "SQL"],
         "answer": "HTML",
-        "explanation": "HTML is used to create the basic structure and content of web pages."
+        "explanation": "HTML is used to structure the content of web pages."
     },
     {
         "question": "Which operator is used for assignment in Python?",
-        "options": [
-            "==",
-            "=",
-            "!=",
-            ">="
-        ],
+        "options": ["==", "=", "!=", ">="],
         "answer": "=",
         "explanation": "The = operator assigns a value to a variable."
     },
     {
         "question": "Which Python collection is ordered and changeable?",
-        "options": [
-            "Tuple",
-            "List",
-            "Set",
-            "String"
-        ],
+        "options": ["Tuple", "List", "Set", "Dictionary"],
         "answer": "List",
-        "explanation": "A Python list is ordered and mutable, meaning its elements can be changed."
+        "explanation": "A list is an ordered and changeable collection in Python."
     },
     {
-        "question": "Which loop is commonly used to repeat over a sequence in Python?",
-        "options": [
-            "for loop",
-            "switch loop",
-            "repeat loop",
-            "select loop"
-        ],
-        "answer": "for loop",
+        "question": "Which loop is commonly used to iterate over a sequence?",
+        "options": ["for", "if", "def", "try"],
+        "answer": "for",
         "explanation": "A for loop is commonly used to iterate through items in a sequence."
     },
     {
-        "question": "Which keyword is used to make a decision in Python?",
-        "options": [
-            "if",
-            "when",
-            "check",
-            "case"
-        ],
+        "question": "Which keyword is used for a condition in Python?",
+        "options": ["when", "if", "check", "condition"],
         "answer": "if",
-        "explanation": "The if keyword is used to execute code when a condition is true."
+        "explanation": "The if keyword is used to execute code based on a condition."
     },
     {
-        "question": "Which type of memory is used as temporary working memory by a computer?",
+        "question": "What type of memory is RAM?",
         "options": [
-            "ROM",
-            "RAM",
-            "Hard Disk",
-            "SSD"
+            "Permanent memory",
+            "Temporary working memory",
+            "External memory",
+            "Optical memory"
         ],
-        "answer": "RAM",
-        "explanation": "RAM provides temporary working memory for programs and data currently in use."
+        "answer": "Temporary working memory",
+        "explanation": "RAM temporarily stores data and instructions while programs are running."
     },
     {
         "question": "Which device is commonly used to enter text into a computer?",
-        "options": [
-            "Monitor",
-            "Printer",
-            "Keyboard",
-            "Speaker"
-        ],
+        "options": ["Monitor", "Keyboard", "Speaker", "Printer"],
         "answer": "Keyboard",
-        "explanation": "A keyboard is an input device commonly used to enter text and commands."
+        "explanation": "A keyboard is an input device used to enter text and commands."
     },
     {
-        "question": "Which device displays visual output from a computer?",
-        "options": [
-            "Keyboard",
-            "Monitor",
-            "Mouse",
-            "Microphone"
-        ],
+        "question": "Which device displays visual output?",
+        "options": ["Keyboard", "Mouse", "Monitor", "Microphone"],
         "answer": "Monitor",
-        "explanation": "A monitor is an output device that displays visual information."
+        "explanation": "A monitor is an output device that displays images, text and videos."
     },
     {
         "question": "What does HTML stand for?",
         "options": [
             "Hyper Text Markup Language",
             "High Text Machine Language",
-            "Hyperlink Text Management Language",
+            "Hyper Transfer Markup Language",
             "Home Tool Markup Language"
         ],
         "answer": "Hyper Text Markup Language",
         "explanation": "HTML stands for Hyper Text Markup Language."
     },
     {
-        "question": "What is CSS mainly used for?",
-        "options": [
-            "Database management",
-            "Styling web pages",
-            "Writing Python programs",
-            "Managing computer memory"
-        ],
-        "answer": "Styling web pages",
-        "explanation": "CSS is used to control the appearance and layout of web pages."
+        "question": "What does CSS mainly control on a web page?",
+        "options": ["Database", "Appearance and style", "Python code", "Computer hardware"],
+        "answer": "Appearance and style",
+        "explanation": "CSS controls the appearance, layout and styling of web pages."
     },
     {
         "question": "Which operator checks whether two values are equal in Python?",
-        "options": [
-            "=",
-            "==",
-            "!=",
-            "=>"
-        ],
+        "options": ["=", "==", "!=", "=>"],
         "answer": "==",
-        "explanation": "The == operator compares two values and checks whether they are equal."
+        "explanation": "The == operator compares two values to check whether they are equal."
     },
     {
-        "question": "What is a variable in programming?",
+        "question": "What is a variable?",
         "options": [
-            "A storage name for a value",
-            "A type of computer",
+            "A storage location for data",
+            "A computer screen",
             "A programming language",
-            "A hardware device"
+            "An operating system"
         ],
-        "answer": "A storage name for a value",
-        "explanation": "A variable is a named reference used to store or represent a value."
+        "answer": "A storage location for data",
+        "explanation": "A variable is a name used to store a value in a program."
     },
     {
         "question": "Which of these is an integer?",
-        "options": [
-            "10",
-            "10.5",
-            "\"10\"",
-            "True"
-        ],
+        "options": ["10", "10.5", '"10"', "True"],
         "answer": "10",
-        "explanation": "10 is an integer because it is a whole number without a decimal point."
+        "explanation": "An integer is a whole number without a decimal point."
     },
     {
         "question": "Which of these is a string in Python?",
-        "options": [
-            "25",
-            "3.14",
-            "\"Hello\"",
-            "False"
-        ],
-        "answer": "\"Hello\"",
+        "options": ["25", "3.14", '"Hello"', "True"],
+        "answer": '"Hello"',
         "explanation": "A string is a sequence of characters enclosed in quotes."
     },
     {
-        "question": "Which language is commonly used to communicate with databases?",
-        "options": [
-            "SQL",
-            "HTML",
-            "CSS",
-            "XML"
-        ],
+        "question": "Which language is commonly used to manage data in relational databases?",
+        "options": ["HTML", "SQL", "CSS", "Python"],
         "answer": "SQL",
-        "explanation": "SQL stands for Structured Query Language and is commonly used to work with databases."
+        "explanation": "SQL is commonly used to store, retrieve and manage data in relational databases."
     },
     {
         "question": "What is an algorithm?",
         "options": [
-            "A step-by-step procedure for solving a problem",
+            "A step-by-step procedure to solve a problem",
             "A computer screen",
-            "A programming language",
-            "A type of hardware"
+            "A type of hardware",
+            "A programming error"
         ],
-        "answer": "A step-by-step procedure for solving a problem",
-        "explanation": "An algorithm is a sequence of well-defined steps used to solve a problem."
+        "answer": "A step-by-step procedure to solve a problem",
+        "explanation": "An algorithm is a step-by-step procedure used to solve a problem."
     },
     {
-        "question": "Which data structure follows FIFO (First In, First Out)?",
-        "options": [
-            "Stack",
-            "Queue",
-            "Tree",
-            "Graph"
-        ],
+        "question": "Which data structure follows FIFO?",
+        "options": ["Stack", "Queue", "Tree", "Graph"],
         "answer": "Queue",
-        "explanation": "A queue follows FIFO, meaning the first element added is the first one removed."
+        "explanation": "FIFO means First In, First Out. A queue follows this principle."
     },
     {
-        "question": "Which data structure follows LIFO (Last In, First Out)?",
-        "options": [
-            "Queue",
-            "Stack",
-            "Array",
-            "Graph"
-        ],
+        "question": "Which data structure follows LIFO?",
+        "options": ["Queue", "Stack", "Array", "Graph"],
         "answer": "Stack",
-        "explanation": "A stack follows LIFO, meaning the last element added is the first one removed."
+        "explanation": "LIFO means Last In, First Out. A stack follows this principle."
     },
     {
         "question": "What is debugging?",
         "options": [
             "Finding and fixing errors in a program",
-            "Creating a computer",
-            "Installing an operating system",
-            "Designing a website"
+            "Writing a new computer",
+            "Deleting an operating system",
+            "Creating hardware"
         ],
         "answer": "Finding and fixing errors in a program",
-        "explanation": "Debugging is the process of finding and correcting errors or bugs in a program."
+        "explanation": "Debugging is the process of finding and fixing errors or bugs in a program."
     },
     {
-        "question": "Which of the following is an operating system?",
-        "options": [
-            "Python",
-            "Windows",
-            "HTML",
-            "Google"
-        ],
+        "question": "Which of these is an operating system?",
+        "options": ["Windows", "Python", "HTML", "Google"],
         "answer": "Windows",
-        "explanation": "Windows is an operating system that manages computer hardware and software resources."
+        "explanation": "Windows is an operating system developed by Microsoft."
     },
     {
         "question": "What does AI stand for?",
         "options": [
-            "Automated Internet",
             "Artificial Intelligence",
+            "Automated Internet",
             "Advanced Information",
             "Artificial Internet"
         ],
         "answer": "Artificial Intelligence",
-        "explanation": "AI stands for Artificial Intelligence, which involves creating systems capable of performing tasks that normally require human intelligence."
+        "explanation": "AI stands for Artificial Intelligence, which enables computers to perform tasks that normally require human intelligence."
     }
 ]
 
 
-# -----------------------------
+# ==============================
 # SESSION STATE
-# -----------------------------
+# ==============================
 
 if "current_question" not in st.session_state:
     st.session_state.current_question = 0
@@ -355,19 +269,9 @@ if "selected_answer" not in st.session_state:
     st.session_state.selected_answer = None
 
 
-# -----------------------------
-# TITLE
-# -----------------------------
-
-st.title("Quiz Game")
-st.write("Test your Python and computer science knowledge")
-
-st.divider()
-
-
-# -----------------------------
+# ==============================
 # QUIZ
-# -----------------------------
+# ==============================
 
 if st.session_state.current_question < len(questions):
 
@@ -379,7 +283,6 @@ if st.session_state.current_question < len(questions):
 
     st.write(f"### {q['question']}")
 
-    # Before answering
     if not st.session_state.answered:
 
         selected = st.radio(
@@ -389,11 +292,10 @@ if st.session_state.current_question < len(questions):
             key=f"question_{st.session_state.current_question}"
         )
 
-        if st.button("Submit Answer", type="primary"):
+        if st.button("Submit Answer"):
 
             if selected is None:
                 st.warning("⚠️ Please select an answer first.")
-
             else:
                 st.session_state.selected_answer = selected
                 st.session_state.answered = True
@@ -403,12 +305,9 @@ if st.session_state.current_question < len(questions):
 
                 st.rerun()
 
-    # After answering
     else:
 
-        selected = st.session_state.selected_answer
-
-        if selected == q["answer"]:
+        if st.session_state.selected_answer == q["answer"]:
 
             st.success("✅ Correct!")
 
@@ -416,66 +315,44 @@ if st.session_state.current_question < len(questions):
 
             st.error("❌ Wrong!")
 
-            st.write(f"**Correct answer:** {q['answer']}")
+            st.write(
+                f"**Correct answer:** {q['answer']}"
+            )
 
         st.info(f"💡 **Explanation:** {q['explanation']}")
 
-        st.divider()
+        if st.button("➡️ Next Question"):
 
-        if st.session_state.current_question < len(questions) - 1:
+            st.session_state.current_question += 1
+            st.session_state.answered = False
+            st.session_state.selected_answer = None
 
-            if st.button("Next Question ➡️", type="primary"):
-
-                st.session_state.current_question += 1
-                st.session_state.answered = False
-                st.session_state.selected_answer = None
-
-                st.rerun()
-
-        else:
-
-            if st.button("See Final Score 🏆", type="primary"):
-
-                st.session_state.current_question += 1
-
-                st.rerun()
+            st.rerun()
 
 
-# -----------------------------
-# FINAL SCORE
-# -----------------------------
+# ==============================
+# FINAL RESULT
+# ==============================
 
 else:
+
+    st.success("🎉 Quiz Completed!")
 
     score = st.session_state.score
     total = len(questions)
     percentage = (score / total) * 100
 
-    st.title("🎉 Quiz Completed!")
-
-    st.write(f"## Your Score: {score}/{total}")
-
+    st.write(f"## Your Score: {score} / {total}")
     st.write(f"### Percentage: {percentage:.1f}%")
 
-    if percentage == 100:
-        st.success("🏆 Perfect score! Amazing!")
-
-    elif percentage >= 80:
-        st.success("🌟 Excellent work!")
-
-    elif percentage >= 60:
-        st.info("👍 Good job! Keep practicing.")
-
-    elif percentage >= 40:
-        st.warning("📚 Not bad! A little more practice will help.")
-
+    if percentage >= 80:
+        st.success("🏆 Excellent! Great knowledge!")
+    elif percentage >= 50:
+        st.info("👍 Good job! Keep learning!")
     else:
-        st.error("💪 Keep learning and try again!")
+        st.warning("📚 Keep practicing. You can do even better!")
 
-    st.divider()
-
-    if st.button("🔄 Start Again", type="primary"):
+    if st.button("🔄 Start Again"):
 
         st.session_state.clear()
-
         st.rerun()
